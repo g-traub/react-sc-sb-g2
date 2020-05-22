@@ -1,15 +1,14 @@
 import React from "react";
-import Badge, { colors } from "./ui/global/atoms/Badge";
 import Tooltip from "./ui/global/atoms/Tooltip";
+import ChatMessageAuthor from './ui/chat/atoms/ChatMessageAuthor'
 
 export default function App() {
   return (
     <div className="App">
-      {/* <Badge text="IRL" color={colors.purple} />
-      <Badge text="IRL" color={colors.grey} /> */}
       <Tooltip title="tooltip">
         <span>Hover me</span>
       </Tooltip>
+      <ChatMessageAuthor color="#f74d0a">Guillaume</ChatMessageAuthor>
     </div>
   );
 }
