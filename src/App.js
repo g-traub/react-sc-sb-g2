@@ -3,7 +3,8 @@ import ChatMessage from './ui/chat/molecules/ChatMessage'
 
 const author = {
   nickname: "Guillaume",
-  chatColor: "#61dafb"
+  chatColor: "#61dafb",
+  badges: ['prime', 'mod']
 }
 
 export default function App() {
