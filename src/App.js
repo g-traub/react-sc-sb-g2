@@ -1,14 +1,15 @@
 import React from "react";
-import Tooltip from "./ui/global/atoms/Tooltip";
-import ChatMessageAuthor from './ui/chat/atoms/ChatMessageAuthor'
+import ChatMessage from './ui/chat/molecules/ChatMessage'
+
+const author = {
+  nickname: "Guillaume",
+  chatColor: "#61dafb"
+}
 
 export default function App() {
   return (
     <div className="App">
-      <Tooltip title="tooltip">
-        <span>Hover me</span>
-      </Tooltip>
-      <ChatMessageAuthor color="#f74d0a">Guillaume</ChatMessageAuthor>
+      <ChatMessage author={author} text="antoine mes ton pc dans du riz"/>
     </div>
   );
 }
