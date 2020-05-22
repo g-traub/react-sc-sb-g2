@@ -5,9 +5,11 @@ import Tooltip from "./ui/global/atoms/Tooltip";
 export default function App() {
   return (
     <div className="App">
-      <Badge text="IRL" color={colors.purple} />
-      <Badge text="IRL" color={colors.grey} />
-      <Tooltip>tooltip</Tooltip>
+      {/* <Badge text="IRL" color={colors.purple} />
+      <Badge text="IRL" color={colors.grey} /> */}
+      <Tooltip title="tooltip">
+        <span>Hover me</span>
+      </Tooltip>
     </div>
   );
 }
