@@ -1,6 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import Badge, { colors } from '../ui/atoms/Badge';
+import Badge, { colors } from '../ui/global/atoms/Badge';
 import { withKnobs, text } from "@storybook/addon-knobs";
 
 export default {

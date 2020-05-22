@@ -1,5 +1,5 @@
 import React from "react";
-import Badge, { colors } from "./ui/atoms/Badge";
+import Badge, { colors } from "./ui/global/atoms/Badge";
 
 export default function App() {
       return (
