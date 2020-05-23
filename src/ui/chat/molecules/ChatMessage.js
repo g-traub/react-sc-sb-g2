@@ -7,6 +7,7 @@ import Tooltip from "../../global/atoms/Tooltip";
 import Icon from "../../global/atoms/Icon";
 // design tokens
 import Colors from "../../global/particles/Colors"
+import {icons} from "../../global/atoms/Icon";
 
 const ChatMessageWrapper = styled.div`
   font-family: "Roobert TRIAL";
@@ -19,7 +20,7 @@ const ChatMessageWrapper = styled.div`
 
 const ChatMessage = ({ author, text }) => {
   const Badges = author.badges.map((iconName, i) => (
-    <Tooltip title="tooltip" key={i}>
+    <Tooltip title={icons[iconName].tooltipName} key={i}>
       <Icon name={iconName}/>
     </Tooltip>
   ));
