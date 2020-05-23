@@ -5,15 +5,21 @@ import PropTypes from "prop-types";
 import ChatMessageAuthor from "../atoms/ChatMessageAuthor";
 import Tooltip from "../../global/atoms/Tooltip";
 import Icon from "../../global/atoms/Icon";
+// design tokens
+import Colors from "../../global/particles/Colors"
 
 const ChatMessageWrapper = styled.div`
+  font-family: "Roobert TRIAL";
+  font-size: 12px;
+  line-height: 140%;
   padding: 0.5rem 2rem;
   word-wrap: break-word;
+  color: ${Colors.darker_grey}
 `;
 
 const ChatMessage = ({ author, text }) => {
-  const Badges = author.badges.map(iconName => (
-    <Tooltip title="tooltip">
+  const Badges = author.badges.map((iconName, i) => (
+    <Tooltip title="tooltip" key={i}>
       <Icon name={iconName}/>
     </Tooltip>
   ));
@@ -24,7 +30,7 @@ const ChatMessage = ({ author, text }) => {
       <ChatMessageAuthor color={author.chatColor}>
         {author.nickname}
       </ChatMessageAuthor>
-      <span>{text}</span>
+      <span> {text}</span>
     </ChatMessageWrapper>
   );
 };

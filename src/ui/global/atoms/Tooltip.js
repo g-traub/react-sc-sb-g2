@@ -28,8 +28,8 @@ const TooltipWrapper = styled.span`
   color: white;
   line-height: 1.2;
   white-space: nowrap;
-  font-family: sans-serif;
   font-size: 12px;
+  border-radius:4px;
   font-weight: 600;
   pointer-events: none;
   user-select: none;
@@ -42,6 +42,7 @@ const TooltipWrapper = styled.span`
     left: 50%;
     margin-left: -3px;
     background-color: #040109;
+    border-radius: 2px;
     height: 6px;
     transform: rotate(45deg);
     width: 6px;

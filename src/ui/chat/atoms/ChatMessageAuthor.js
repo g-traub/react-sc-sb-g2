@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { hexColorRegex } from "../../../utils/regex";
 
 const ChatMessageAuthorWrapper = styled.span`
-  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   ${({color}) => `color: ${color}`}
