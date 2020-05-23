@@ -11,8 +11,8 @@ import ChatLink from "../atoms/ChatLink";
 // design tokens
 import Colors from "../../global/particles/Colors";
 
-const parseText = (text) => {
-  const parsed = text.split(" ").map((word, index) => {
+const parsemessage = (message) => {
+  const parsed = message.split(" ").map((word, index) => {
     if (word in emotes === true) {
       return (
         <Tooltip title={word} key={word}>
@@ -37,7 +37,7 @@ const ChatMessageWrapper = styled.div`
   color: ${Colors.darker_grey};
 `;
 
-const ChatMessage = ({ author, text }) => {
+const ChatMessage = ({ author, message }) => {
   const Badges =
     author.badges &&
     author.badges.map((badgeName, i) => (
@@ -49,10 +49,10 @@ const ChatMessage = ({ author, text }) => {
   return (
     <ChatMessageWrapper>
       {Badges}
-      <ChatMessageAuthor color={author.chatColor}>
-        {author.nickname}
+      <ChatMessageAuthor color={author.userColor}>
+        {author.userName}
       </ChatMessageAuthor>
-      <span> {parseText(text)}</span>
+      <span> {parsemessage(message)}</span>
     </ChatMessageWrapper>
   );
 };
@@ -60,11 +60,11 @@ const ChatMessage = ({ author, text }) => {
 // Props
 ChatMessage.propTypes = {
   author: PropTypes.shape({
-    nickname: PropTypes.string.isRequired,
-    chatColor: PropTypes.string,
+    userName: PropTypes.string.isRequired,
+    userColor: PropTypes.string,
     badges: PropTypes.arrayOf(PropTypes.string),
   }),
-  text: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
 };
 
 export default ChatMessage;
