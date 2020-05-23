@@ -34,6 +34,7 @@ export default function App() {
       <ChatMessage author={author_3} text="Sympa ce jeu"/>
       <ChatMessage author={author_1} text="ponceFLEUR"/>
       <ChatMessage author={author_1} text="C'est cool ces emotes ponceCOOL"/>
+      <ChatMessage author={author_0} text="La documentation du projet : https://stackoverflow.com"/>
     </div>
   );
 }
