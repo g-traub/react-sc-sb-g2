@@ -19,7 +19,7 @@ const ChatMessageWrapper = styled.div`
 `;
 
 const ChatMessage = ({ author, text }) => {
-  const Badges = author.badges.map((iconName, i) => (
+  const Badges = author.badges && author.badges.map((iconName, i) => (
     <Tooltip title={icons[iconName].tooltipName} key={i}>
       <Icon name={iconName}/>
     </Tooltip>
