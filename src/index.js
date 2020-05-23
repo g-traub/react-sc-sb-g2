@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./reset.css";
-import WebFont from 'webfontloader';
+import "./styles/reset.css";
+import "./styles/fonts.css"
 
 import App from "./App";
 
@@ -12,10 +12,3 @@ ReactDOM.render(
   </React.StrictMode>,
   rootElement
 );
-
-WebFont.load({
-  custom: {
-    families: ['Roobert TRIAL'],
-    urls: ['/fonts.css']
-  }
-});
