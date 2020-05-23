@@ -13,7 +13,8 @@
     "react-dom": "16.12.0",
     "react-scripts": "3.0.1",
     "storybook": "5.3.18",
-    "styled-components": "5.1.0"
+    "styled-components": "5.1.0",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@storybook/addon-console": "^1.2.1",

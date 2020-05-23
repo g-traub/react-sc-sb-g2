@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "Roobert TRIAL";
+    font-style: normal;
+    font-weight: bold;
+    src: url("/assets/RoobertTRIAL-Bold.woff2") format("woff2"),
+        url("/assets/RoobertTRIAL-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Roobert TRIAL";
+    src: url("/assets/RoobertTRIAL-HeavyItalic.woff2") format("woff2"),
+        url("/assets/RoobertTRIAL-HeavyItalic.woff") format("woff");
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Roobert TRIAL";
+    src: url("/assets/RoobertTRIAL-SemiBold.woff2") format("woff2"),
+        url("/assets/RoobertTRIAL-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roobert TRIAL";
+    src: url("/assets/RoobertTRIAL-LightItalic.woff2") format("woff2"),
+        url("/assets/RoobertTRIAL-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Roobert TRIAL";
+    src: url("/assets/RoobertTRIAL-BoldItalic.woff2") format("woff2"),
+        url("/assets/RoobertTRIAL-BoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Roobert TRIAL";
+    src: url("/assets/RoobertTRIAL-Light.woff2") format("woff2"),
+        url("/assets/RoobertTRIAL-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roobert TRIAL";
+    src: url("/assets/RoobertTRIAL-RegularItalic.woff2") format("woff2"),
+        url("/assets/RoobertTRIAL-RegularItalic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Roobert TRIAL";
+    src: url("/assets/RoobertTRIAL-Heavy.woff2") format("woff2"),
+        url("/assets/RoobertTRIAL-Heavy.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roobert TRIAL";
+    src: url("/assets/RoobertTRIAL-Medium.woff2") format("woff2"),
+        url("/assets/RoobertTRIAL-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roobert TRIAL";
+    src: url("/assets/RoobertTRIAL-SemiBoldItalic.woff2") format("woff2"),
+        url("/assets/RoobertTRIAL-SemiBoldItalic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Roobert TRIAL";
+    src: url("/assets/RoobertTRIAL-MediumItalic.woff2") format("woff2"),
+        url("/assets/RoobertTRIAL-MediumItalic.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Roobert TRIAL";
+    src: url("/assets/RoobertTRIAL-Regular.woff2") format("woff2"),
+        url("/assets/RoobertTRIAL-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
