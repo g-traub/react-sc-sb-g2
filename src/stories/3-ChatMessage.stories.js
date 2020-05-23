@@ -9,28 +9,37 @@ export default {
   decorators: [withKnobs],
 };
 
-const authorDefault = {
+const author_0 = {
   nickname: "Guillaume",
   chatColor: "#F2994A",
 };
 
-const authorWithChatBadges = {
+const author_1 = {
   nickname: "Guillaume",
   chatColor: "#F2994A",
   badges: ["prime", "mod"],
 };
 
+const author_2 = {
+    nickname: "Jean",
+    chatColor: "#bfe35c",
+    badges: ['turbo', 'verified']
+}
 
 export const Default = () => (
   <ChatMessage
-    author={authorDefault}
+    author={author_0}
     text=" Aurelien il commence a se faire tard la stop ton jeu video et arrete de crier dans la maison "
   />
 );
 
 export const WithChatBadges = () => (
   <ChatMessage
-    author={authorWithChatBadges}
+    author={author_1}
     text=" Aurelien il commence a se faire tard la stop ton jeu video et arrete de crier dans la maison "
   />
 );
+
+export const WithChatEmotes = () => <ChatMessage author={author_2} text="C'est cool ces emotes ponceCOOL ponceFLEUR"/>
+
+export const WithChatLinks = () => <ChatMessage author={author_2} text="La documentation du projet : https://stackoverflow.com"/>
