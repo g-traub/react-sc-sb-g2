@@ -5,7 +5,8 @@ import Icon from "../../global/atoms/Icon"
 
 // Emotes would be normally fetched
 export const emotes = {
-  ponceFLEUR: "https://static-cdn.jtvnw.net/emoticons/v1/301716641/2.0"
+  ponceFLEUR: "https://static-cdn.jtvnw.net/emoticons/v1/301716641/2.0",
+  ponceCOOL: "https://static-cdn.jtvnw.net/emoticons/v1/301961639/1.0"
 };
 
 const ChatEmoteWrapper = styled(Icon)`
