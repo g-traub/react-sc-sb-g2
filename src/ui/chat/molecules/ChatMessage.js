@@ -5,9 +5,10 @@ import PropTypes from "prop-types";
 import ChatMessageAuthor from "../atoms/ChatMessageAuthor";
 import Tooltip from "../../global/atoms/Tooltip";
 import Icon from "../../global/atoms/Icon";
+import ChatEmote, { emotes } from "../atoms/ChatEmote";
 // design tokens
-import Colors from "../../global/particles/Colors"
-import {icons} from "../../global/atoms/Icon";
+import Colors from "../../global/particles/Colors";
+import { icons } from "../../global/atoms/Icon";
 
 const ChatMessageWrapper = styled.div`
   font-family: "Roobert TRIAL";
@@ -15,15 +16,17 @@ const ChatMessageWrapper = styled.div`
   line-height: 140%;
   padding: 0.5rem 2rem;
   word-wrap: break-word;
-  color: ${Colors.darker_grey}
+  color: ${Colors.darker_grey};
 `;
 
 const ChatMessage = ({ author, text }) => {
-  const Badges = author.badges && author.badges.map((iconName, i) => (
-    <Tooltip title={icons[iconName].tooltipName} key={i}>
-      <Icon name={iconName}/>
-    </Tooltip>
-  ));
+  const Badges =
+    author.badges &&
+    author.badges.map((iconName, i) => (
+      <Tooltip title={icons[iconName].tooltipName} key={i}>
+        <Icon name={iconName} />
+      </Tooltip>
+    ));
 
   return (
     <ChatMessageWrapper>
