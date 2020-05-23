@@ -1,7 +1,6 @@
 import React from "react";
 import ChatMessage from "../ui/chat/molecules/ChatMessage";
-import { action } from "@storybook/addon-actions";
-import { withKnobs, text } from "@storybook/addon-knobs";
+import { withKnobs, color, text, optionsKnob as options } from '@storybook/addon-knobs';
 
 export default {
   title: "ChatMessage",
@@ -9,37 +8,46 @@ export default {
   decorators: [withKnobs],
 };
 
-const author_0 = {
-  nickname: "Guillaume",
-  chatColor: "#F2994A",
+// Knobs
+const label = 'Badges';
+const valuesObj = {
+  staff: "staff",
+  admin: "admin",
+  prime: "prime",
+  turbo: "turbo",
+  broadcaster: "broadcaster",
+  mod: "mod",
+  verified: "verified",
+  vip: "vip",
 };
-
-const author_1 = {
-  nickname: "Guillaume",
-  chatColor: "#F2994A",
-  badges: ["prime", "mod"],
+const defaultValue = 'prime';
+const optionsObj = {
+  display: 'multi-select'
 };
+const badgesValue = options(label, valuesObj, defaultValue, optionsObj, 'Auteur');
 
-const author_2 = {
-    nickname: "Jean",
-    chatColor: "#bfe35c",
-    badges: ['turbo', 'verified']
+const authorValue = {
+  nickname: text("Nom d'utilisateur", "Guillaume", "Auteur"),
+  chatColor: color("Couleur", "#F2994A", "Auteur"),
+  badges: [badgesValue]
 }
+const textValue = text("Message", "Aurelien il commence a se faire tard la stop ton jeu video et arrete de crier dans la maison", "Message")
 
+// Exemples
 export const Default = () => (
   <ChatMessage
-    author={author_0}
-    text=" Aurelien il commence a se faire tard la stop ton jeu video et arrete de crier dans la maison "
+    author={authorValue}
+    text={textValue}
   />
 );
 
 export const WithChatBadges = () => (
   <ChatMessage
-    author={author_1}
-    text=" Aurelien il commence a se faire tard la stop ton jeu video et arrete de crier dans la maison "
+    author={authorValue}
+    text={textValue}
   />
 );
 
-export const WithChatEmotes = () => <ChatMessage author={author_2} text="C'est cool ces emotes ponceCOOL ponceFLEUR"/>
+export const WithChatEmotes = () => <ChatMessage author={authorValue} text="C'est cool ces emotes ponceCOOL ponceFLEUR"/>
 
-export const WithChatLinks = () => <ChatMessage author={author_2} text="La documentation du projet : https://stackoverflow.com"/>
+export const WithChatLinks = () => <ChatMessage author={authorValue} text="La documentation du projet : https://stackoverflow.com"/>
