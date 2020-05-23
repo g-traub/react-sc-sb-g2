@@ -32,6 +32,7 @@ export default function App() {
       <ChatMessage author={author_1} text="Ah ah ah"/>
       <ChatMessage author={author_2} text="Pas de change Aurelien"/>
       <ChatMessage author={author_3} text="Sympa ce jeu"/>
+      <ChatMessage author={author_1} text="ponceFLEUR"/>
     </div>
   );
 }

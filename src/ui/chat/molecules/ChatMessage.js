@@ -4,11 +4,26 @@ import PropTypes from "prop-types";
 // components
 import ChatMessageAuthor from "../atoms/ChatMessageAuthor";
 import Tooltip from "../../global/atoms/Tooltip";
-import Icon from "../../global/atoms/Icon";
+import ChatBadge, { badges } from "../atoms/ChatBadge";
 import ChatEmote, { emotes } from "../atoms/ChatEmote";
 // design tokens
 import Colors from "../../global/particles/Colors";
-import { icons } from "../../global/atoms/Icon";
+
+const parseText = (text) => {
+  const parsed = text.split(' ').map((word, index) => {
+    if (word in emotes === true) {
+      return  (
+        <Tooltip title={word} key={word}>
+          <ChatEmote name={word}></ChatEmote>
+        </Tooltip>
+      )
+      
+    } else {
+      return ` ${word}`
+    }
+  })
+  return parsed
+}
 
 const ChatMessageWrapper = styled.div`
   font-family: "Roobert TRIAL";
@@ -22,9 +37,9 @@ const ChatMessageWrapper = styled.div`
 const ChatMessage = ({ author, text }) => {
   const Badges =
     author.badges &&
-    author.badges.map((iconName, i) => (
-      <Tooltip title={icons[iconName].tooltipName} key={i}>
-        <Icon name={iconName} />
+    author.badges.map((badgeName, i) => (
+      <Tooltip title={badges[badgeName].tooltipName} key={i}>
+        <ChatBadge name={badgeName} />
       </Tooltip>
     ));
 
@@ -34,7 +49,7 @@ const ChatMessage = ({ author, text }) => {
       <ChatMessageAuthor color={author.chatColor}>
         {author.nickname}
       </ChatMessageAuthor>
-      <span> {text}</span>
+      <span> {parseText(text)}</span>
     </ChatMessageWrapper>
   );
 };
